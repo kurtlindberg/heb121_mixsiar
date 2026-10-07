@@ -35,8 +35,8 @@ discr <- load_discr_data(
 # Plot mixture and source data
 plot_data(
   filename = "plots/isospace_plot_diet",
-  plot_save_pdf = FALSE,
-  plot_save_png = TRUE,
+  plot_save_pdf = TRUE,
+  plot_save_png = FALSE,
   mix,
   source,
   discr
@@ -47,8 +47,8 @@ plot_prior(
   alpha.prior = 1,
   source,
   filename = "plots/prior_plot_diet",
-  plot_save_pdf = FALSE,
-  plot_save_png = TRUE
+  plot_save_pdf = TRUE,
+  plot_save_png = FALSE
 )
 
 
@@ -80,8 +80,8 @@ jags.1 <- run_model(
 output_options <- list(
   summary_save = TRUE,
   summary_name = "outputs/output_bovids_2end_diet",
-  sup_post = TRUE,
-  plot_post_save_pdf = FALSE,
+  sup_post = FALSE,
+  plot_post_save_pdf = TRUE,
   plot_post_name = "plots/posterior_density_diet",
   sup_pairs = TRUE,
   plot_pairs_save_pdf = FALSE,
@@ -95,8 +95,8 @@ output_options <- list(
   diag_save = TRUE,
   diag_name = "diagnostics/diag_bovids_2end_diet",
   indiv_effect = FALSE,
-  plot_post_save_png = TRUE,
-  plot_pairs_save_png = TRUE,
+  plot_post_save_png = FALSE,
+  plot_pairs_save_png = FALSE,
   plot_xy_save_png = FALSE,
   diag_save_ggmcmc = TRUE
 )
